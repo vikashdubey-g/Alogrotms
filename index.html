@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 50%;
+        }
+
+        span {
+            font-size: 1.5em
+        }
+
+        .parent {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            /* z-index: 10; */
+            border: 1px solid #000;
+            border-radius: 4px;
+            background: pink;
+            width: 300px;
+            height: 300px;
+        }
+
+        /* 
+        .child {
+            background-color: red;
+
+
+            min-height: 200px;
+            min-width: 350px;
+        } */
+        .check {
+            background-color: aqua;
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+            padding: 10px 5px 15px;
+        }
+
+        #hello {
+            border: 1px solid black;
+        }
+
+        .test1 {
+            margin: 10px 0;
+            border-color: red;
+        }
+
+        .test2 {
+            margin: 20px 0;
+        }
+
+        span .text {
+            color: red;
+        }
+
+        .text span {
+            color: blue;
+        }
+
+        .par {
+            color: green;
+        }
+
+        p span {
+            color: yellow;
+        }
+
+        section+p {
+            color: red;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="grid">Hello</div>
+    <section></section>
+    <p>Vikash Dubey</p>
+    <div class="par">
+        <p>
+            <span class="text">
+                <span>Text</span>
+            </span>
+        </p>
+    </div>
+    <p><span>vikcy</span></p>
+    <div class="check">vikas</div>
+    <div class="test1" id="hello">test1</div>
+    <div class="test2">test2</div>
+    <div style="margin: auto; width: 50%;">
+        <img src="https://source.unsplash.com/user/c_v_r/100x100" alt="testImage" />
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+        integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <div><button>Like Me</button></div>
+    <div>Vikash</div>
+    <h1 style="display: none">Vikash Dubey</h1>
+
+
+    <div style="visibility: hidden; color: red">Dubey</div>
+    <div style="visibility: hidden; color: red">Dubey</div>
+    <div style="visibility: hidden; color: red">Dubey</div>
+    <p>Vicky dubey</p>
+    <h1 id="heading">Hello Vikash</h1>
+    <div class="parent">
+        <div class="child">s</div>
+    </div> -->
+    <button class="increment_btn">Increment</button>
+    <p>Button Pressed <span class="increment_pressed">0</span> Times </p>
+    <p>Triggered <span class="increment_count">0</span>Times </p>
+    <menu aria-label="Share article">
+        <li><button>Facebook</button></li>
+        <li><button>Insta</button></li>
+        <li><button>Twitter</button></li>
+    </menu>
+</body>
+<script type="text/javascript" src="./practice.js">
+</script>
+
+</html>
