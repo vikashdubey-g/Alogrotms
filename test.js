@@ -1,15 +1,3 @@
-// const people = [
-//     { id: 1, name: 'ser' },
-//     { id: 5, name: 'alex' },
-//     { id: 300, name: 'brittany' }
-// ];
-
-// const idToRemove = "alex";
-
-// const filteredPeople = people.filter((item) => item.name !== idToRemove);
-
-// console.log("people", filteredPeople)
-
 // infinite currying
 
 // const add = (a) => {
@@ -81,10 +69,11 @@
 // console.log([..."vicky"])
 
 // function getItems(fruitList, favoriteFruit, ...args) {
+
 //   return [...fruitList, ...args, favoriteFruit];
 // }
 
-// console.log(getItems(["banana", "apple"], "poor", "orange"));
+// console.log("items",getItems(["banana", "apple"], "poor", "orange"));
 
 // let c = { greeting: "Hey!" };
 // let d;
@@ -127,12 +116,17 @@
 // }
 // myFun();
 
-const promise = new Promise((resolve, reject) => {
-  const x = "vikash";
-  const y = "vikash";
-  if (x === y) {
-    resolve("show me");
-  } else reject("rjected");
-});
+const revInt = (num) => {
+  let cloneNum = Math.abs(num);
+  let res = 0;
+  while (cloneNum > 0) {
+    n = cloneNum % 10;
+    res = res * 10 + n;
+    cloneNum = parseInt(cloneNum / 10);
+    console.log("n", n);
+  }
+  return res;
+};
 
-promise.then((res) => console.log(res,'resolve')).catch((err) => console.log(err,'reject'))
+const revIntRes = revInt(123);
+console.log("revIntRes", revIntRes);

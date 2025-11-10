@@ -15,21 +15,19 @@
 // console.log("res", res);
 
 // for anyNumber
-// var isPalindrome = function (x) {
-//   const cloneX = x;
-//   let revNum = 0;
-//   if (x < 0 || x > 2 ** 32 - 1) {
-//     return false;
-//   }
-//   while (x > 0) {
-//     let digit = x % 10;
-//     revNum = revNum * 10 + digit;
-//     x = parseInt(x / 10);
-//   }
-//   return revNum === cloneX;
-// };
+var isPalindrome = function (x) {
+  if (x < 0 || x > 2 ** 32 - 1) return false;
+  let cloneNumber = x;
+  let revNum = 0;
+  while (x > 0) {
+    digit = x % 10;
+    revNum = revNum * 10 + digit;
+    x = parseInt(x / 10);
+  }
+  return cloneNumber === revNum;
+};
 
-// let res = isPalindrome(10);
-// res = isPalindrome(121);
+let res = isPalindrome(10);
+res = isPalindrome(121);
 // res = isPalindrome(-121);
-// console.log("res", res);
+console.log("res", res);

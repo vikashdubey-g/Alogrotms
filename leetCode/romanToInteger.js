@@ -9,22 +9,33 @@ const key = {
 };
 
 var romanToInt = function (s) {
-  const arr = [];
-  length = s.length;
-  for (let i = 0; i < length; i++) {
+  if (!s) return;
+  let result = key[s.charAt(s.length - 1)];
+  for (let i = s.length - 2; i >= 0; i--) {
+    console.log(s[i])
     if (key[s[i]] < key[s[i + 1]]) {
-      arr.push(key[s[i + 1]] - key[s[i]]);
-      i++;
-      continue;
-    } else arr.push(key[s[i]]);
+      result -= key[s[i]];
+    } else {
+      result += key[s[i]];
+    }
   }
-  return arr.reduce((acc, curr) => acc + curr);
+  return result;
+  //   const arr = [];
+  //   length = s.length;
+  //   for (let i = 0; i < length; i++) {
+  //     if (key[s[i]] < key[s[i + 1]]) {
+  //       arr.push(key[s[i + 1]] - key[s[i]]);
+  //       i++;
+  //       continue;
+  //     } else arr.push(key[s[i]]);
+  //   }
+  //   return arr.reduce((acc, curr) => acc + curr);
 };
 
-console.log(romanToInt("I"));
-console.log(romanToInt("III"));
-romanToInt("IV");
-romanToInt("IX");
-romanToInt("LVIII");
+// console.log(romanToInt("I"));
+// console.log(romanToInt("III"));
+// romanToInt("IV");
+// romanToInt("IX");
+// romanToInt("LVIII");
 romanToInt("MCMXCIV");
-romanToInt("MMMCMXCIX");
+// romanToInt("MMMCMXCIX");

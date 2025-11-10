@@ -46,23 +46,36 @@ var longestCommonPrefix1 = function (strs) {
     minLen = Math.min(minLen, items.length);
   }
 
-    // Second scan: find common chars until a different one
-    for (let i = 0; i < minLength; i++) {
-        for (const str of strs) {
-          if (str[i] !== strs[0][i]) {
-            return str.substr(0, i);
-          }
-        }
+  // Second scan: find common chars until a different one
+  for (let i = 0; i < minLength; i++) {
+    for (const str of strs) {
+      if (str[i] !== strs[0][i]) {
+        return str.substr(0, i);
       }
-      return strs[0].substr(0, minLength);
+    }
+  }
+  return strs[0].substr(0, minLength);
 
-//   for (let i = 0; i < minLen; i++) {
-//     currElement = strs[0][i]; // first string of first element
-//     for (let j = 1; j < strs.length; j++) {
-//       if (strs[j][i] !== currElement) return res; // comparing the string stored in currElement with the second element's string
-//     }
-//     res += currElement;
-//   }
+  //   for (let i = 0; i < minLen; i++) {
+  //     currElement = strs[0][i]; // first string of first element
+  //     for (let j = 1; j < strs.length; j++) {
+  //       if (strs[j][i] !== currElement) return res; // comparing the string stored in currElement with the second element's string
+  //     }
+  //     res += currElement;
+  //   }
 
+  // with sorted method
+  // const len = strs.length;
+  // if (!len) return;
+  // const sortedStrs = strs.sort();
+  // const firstEle = sortedStrs[0];
+  // const lastEle = sortedStrs.at(-1);
+  // let res = "";
+  // for (let i = 0; i < firstEle.length; i++) {
+  //   if (firstEle[i] !== lastEle[i]) return res;
+  //   res += firstEle[i];
+  // }
+
+  // return res;
   return res;
 };
